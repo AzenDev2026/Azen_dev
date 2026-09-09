@@ -1,5 +1,6 @@
 # Azen(latest)
-<img width="1920" height="1080" alt="截图 2026-08-14 22-36-37" src="https://github.com/user-attachments/assets/cb427a46-d31c-40f3-b2e2-71a8f40ca713" />
+<img width="1600" height="900" alt="Screenshot_20260905_101458" src="https://github.com/user-attachments/assets/818da43f-75c2-4b95-97f3-45114c71b906" />
+
 
 Azen linux is A operating system built on Arch linux. Unforetunately our technologies are not the best so can only supporting VMX files for testing,Compared to the traditional Arch Linux rolling updates, we still choose to release major versions periodically rather than using rolling updates.
 We also invented a exclusive technologies called "ALRM" full name "Azen Laptop Resources Management" that helps old machine could be more smooth on performance
