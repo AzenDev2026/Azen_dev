@@ -1,4 +1,6 @@
-# Azen(latest)           <img width="283" height="110" alt="ubuntu-logo-text" src="https://github.com/user-attachments/assets/54bbd176-b3cf-4100-ac14-302e4879d215" />
+# Azen(latest)
+<img width="283" height="110" alt="ubuntu-logo-text" src="https://github.com/user-attachments/assets/9ff35423-636d-4052-a6d8-8a21916f98e1" />
+
 
 <img width="1600" height="900" alt="Screenshot_20260905_101458" src="https://github.com/user-attachments/assets/818da43f-75c2-4b95-97f3-45114c71b906" />
 
