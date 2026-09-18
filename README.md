@@ -1,13 +1,10 @@
-# Azen(latest)
-<img width="283" height="110" alt="ubuntu-logo-text" src="https://github.com/user-attachments/assets/9ff35423-636d-4052-a6d8-8a21916f98e1" />
+#NVazen(latest)
 
-
-<img width="1600" height="900" alt="Screenshot_20260905_101458" src="https://github.com/user-attachments/assets/818da43f-75c2-4b95-97f3-45114c71b906" />
-
-
-Azen linux is A operating system built on Arch linux. Unforetunately our technologies are not the best so can only supporting VMX files for testing,Compared to the traditional Arch Linux rolling updates, we still choose to release major versions periodically rather than using rolling updates.
-We also invented a exclusive technologies called "ALRM" full name "Azen Laptop Resources Management" that helps old machine could be more smooth on performance
-(more info,visit our website!)
-Thanks for supporting!
-contact us: zitingliang18@gmail.com
-our websites: https://azen.dev
+<img width="100" height="100" alt="blue_ribbon_icon_v6_transparent" src="https://github.com/user-attachments/assets/d4555ae7-8fe4-4bee-9cba-9dbbb51e5d51" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/7f297a5d-a406-47d0-ac59-59277be0aee2" />
+NVazen linux is a new build of the original Azen,it contains update like the ALRM technology update,and change a little of the base
+NVazen are still built on arch so does not change the base to other linux
+hope you enjoy using it!
+official website(same as azen): https://azen.dev
+personal contact: zitingliang18@gmail.com
+thanks for the support!
