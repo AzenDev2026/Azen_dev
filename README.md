@@ -22,7 +22,7 @@ Azen is a project with two parts:
 
 ## 🚀 Latest Release
 
-**NVazen 1.0 R.1H2609** — [Download](https://github.com/AzenDev2026/Azen_dev/releases)
+**NVazen 2.0lts.1H2609**
 
 Built on Arch Linux, featuring:
 - Upgraded ALRM technology (C++ edition)
