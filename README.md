@@ -1,11 +1,71 @@
-# NVazen(latest)
+# Azen™ / NVazen™
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/35640b5b-f97d-4863-b711-e0621bcd528d" />
 
-<img width="100" height="100" alt="blue_ribbon_icon_v6_transparent" src="https://github.com/user-attachments/assets/d4555ae7-8fe4-4bee-9cba-9dbbb51e5d51" />
-latest: NVazen 1.0R.1H2609
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/7f297a5d-a406-47d0-ac59-59277be0aee2" />
-NVazen linux is a new build of the original Azen,it contains update like the ALRM technology update,and change a little of the base
-NVazen are still built on arch so does not change the base to other linux
-hope you enjoy using it!
-official website(same as azen): https://azen.dev
-personal contact: zitingliang18@gmail.com
-thanks for the support!
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Website](https://img.shields.io/badge/Website-azen.dev-brightgreen)](https://azen.dev)
+[![GitHub](https://img.shields.io/badge/GitHub-AzenDev2026-black)](https://github.com/AzenDev2026/Azen_dev)
+
+> A modern Linux distribution and resource management technology for older laptops.
+
+---
+
+## 📖 What is Azen?
+
+Azen is a project with two parts:
+
+| Part | Description |
+|------|-------------|
+| **Azen OS / NVazen** | A Linux distribution based on Arch Linux, focused on elegance and performance |
+| **ALRM Tech** | Azen Laptop Resources Management — a technology that enhances battery life and responsiveness on older laptops |
+
+---
+
+## 🚀 Latest Release
+
+**NVazen 1.0 R.1H2609** — [Download](https://github.com/AzenDev2026/Azen_dev/releases)
+
+Built on Arch Linux, featuring:
+- Upgraded ALRM technology (C++ edition)
+- Modern UI with soft rounded corners
+- Deep sleep & App Nap
+- Privacy-first: no telemetry
+
+---
+
+## 📂 Repository Structure
+
+| Folder | Description |
+|--------|-------------|
+| `AlreSearch/` | Alre search engine (early test) |
+| `Wtml/` | Web template markup language |
+| `assets/` | Project assets |
+| `screenshot/` | Screenshots |
+| `issues/` | Issue tracking |
+
+---
+
+## 🔧 ALRM Technology
+
+ALRM (Azen Laptop Resources Management) is our exclusive technology:
+
+- **App Nap** — Freezes idle background apps to save CPU & power
+- **Deep Sleep** — Cuts hardware power on lid close, fast wake
+- **Resource Optimization** — Dynamic priority for background processes
+
+---
+
+## 📜 License
+
+GPLv3 — see [LICENSE](LICENSE)
+
+---
+
+## 📬 Contact
+
+- 🌐 Website: [azen.dev](https://azen.dev)
+- 📧 Email: zitingliang18@gmail.com
+- 🐙 GitHub: [AzenDev2026/Azen_dev](https://github.com/AzenDev2026/Azen_dev)
+
+---
+
+**© 2026 Ziting Liang (Azen Project)**
