@@ -2,7 +2,7 @@
 # ================================================================
 #  ALPRM Monitor - Deploy Script
 #  Azen Laptop Power Resources Management
-#  Target: Arch Linux (systemd pre-installed)
+#  Supports: Arch Linux / Ubuntu / Debian
 # ================================================================
 
 set -e
@@ -26,20 +26,28 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-# ---------- 确认是 Arch Linux ----------
-if [ ! -f /etc/arch-release ]; then
-    warn "未检测到 Arch Linux，脚本可能不适用"
-    read -p "是否继续？(y/N) " -n 1 -r
-    echo
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        exit 1
+# ---------- 识别发行版 ----------
+detect_distro() {
+    if [ -f /etc/arch-release ]; then
+        echo "arch"
+    elif [ -f /etc/debian_version ]; then
+        # 进一步区分 Debian / Ubuntu
+        if grep -qi "ubuntu" /etc/os-release 2>/dev/null; then
+            echo "ubuntu"
+        else
+            echo "debian"
+        fi
+    else
+        echo "unknown"
     fi
-fi
+}
+
+DISTRO=$(detect_distro)
+info "检测到发行版: $DISTRO"
 
 # ---------- 定位项目根目录 ----------
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
-
 info "项目目录: $SCRIPT_DIR"
 
 if [ ! -f "Makefile" ]; then
@@ -47,32 +55,50 @@ if [ ! -f "Makefile" ]; then
     exit 1
 fi
 
-# ---------- 1. 检查依赖 ----------
+# ---------- 1. 检查并安装依赖 ----------
 info "检查编译依赖..."
 
-MISSING=()
+install_deps_arch() {
+    local pkgs=()
+    command -v gcc  &>/dev/null || pkgs+=("gcc")
+    command -v make &>/dev/null || pkgs+=("make")
+    [ -f /usr/include/systemd/sd-bus.h ] || pkgs+=("systemd-libs")
 
-if ! command -v gcc &> /dev/null; then
-    MISSING+=("gcc")
-fi
+    if [ ${#pkgs[@]} -ne 0 ]; then
+        warn "缺少依赖: ${pkgs[*]}"
+        info "通过 pacman 安装..."
+        pacman -S --needed --noconfirm "${pkgs[@]}"
+    fi
+}
 
-if ! command -v make &> /dev/null; then
-    MISSING+=("make")
-fi
+install_deps_debian() {
+    local pkgs=()
+    command -v gcc  &>/dev/null || pkgs+=("gcc")
+    command -v make &>/dev/null || pkgs+=("make")
+    [ -f /usr/include/systemd/sd-bus.h ] || pkgs+=("libsystemd-dev")
 
-# 检查 libsystemd 头文件
-if [ ! -f /usr/include/systemd/sd-bus.h ]; then
-    MISSING+=("systemd-libs")
-fi
+    if [ ${#pkgs[@]} -ne 0 ]; then
+        warn "缺少依赖: ${pkgs[*]}"
+        info "通过 apt 安装..."
+        apt update
+        apt install -y "${pkgs[@]}"
+    fi
+}
 
-if [ ${#MISSING[@]} -ne 0 ]; then
-    warn "缺少以下依赖: ${MISSING[*]}"
-    info "正在通过 pacman 安装..."
-    pacman -S --needed --noconfirm "${MISSING[@]}"
-    ok "依赖安装完成"
-else
-    ok "所有依赖已满足"
-fi
+case "$DISTRO" in
+    arch)
+        install_deps_arch
+        ;;
+    ubuntu|debian)
+        install_deps_debian
+        ;;
+    *)
+        warn "未知发行版，跳过自动依赖安装"
+        warn "请手动确保已安装: gcc, make, libsystemd-dev"
+        ;;
+esac
+
+ok "依赖检查完成"
 
 # ---------- 2. 编译 ----------
 info "开始编译..."
@@ -90,7 +116,7 @@ if [ ! -f "alprm-monitor" ]; then
     exit 1
 fi
 
-# ---------- 3. 安装 ----------
+# ---------- 3. 安装二进制 ----------
 info "安装到系统..."
 make install
 ok "二进制已安装到 /usr/local/bin/alprm-monitor"
@@ -147,9 +173,6 @@ echo "    查看状态:  sudo systemctl status alprm-monitor"
 echo "    查看日志:  sudo journalctl -u alprm-monitor -f"
 echo "    事件日志:  sudo tail -f /etc/ALPRM_log/events.log"
 echo "    停止服务:  sudo systemctl stop alprm-monitor"
-echo "    卸载:      sudo systemctl disable --now alprm-monitor"
-echo "               sudo make uninstall"
-echo "               sudo rm /etc/systemd/system/alprm-monitor.service"
 echo
 echo "  手动运行（不走服务）:"
 echo "    sudo /usr/local/bin/alprm-monitor"
