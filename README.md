@@ -1,4 +1,6 @@
 # NVazen™ / Azen™
+<img width="569" height="192" alt="NVazentm" src="https://github.com/user-attachments/assets/d7e39495-6806-4b0c-b506-041ec9e2d632" />
+
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/35640b5b-f97d-4863-b711-e0621bcd528d" />
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
