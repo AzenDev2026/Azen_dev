@@ -11,7 +11,7 @@
 
 ---
 
-## 🏛️ Organization Structure
+##  Organization Structure
 
 Azen is a project under **白企 Whitent**, organized as follows:
 
@@ -39,7 +39,7 @@ Azen is a project under **白企 Whitent**, organized as follows:
 
 ---
 
-## 🖥️ What is Azen?
+##  What is Azen?
 
 Azen is a project with two parts:
 
