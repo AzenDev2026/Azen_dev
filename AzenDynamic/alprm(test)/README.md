@@ -41,7 +41,6 @@ It is **read-only** and safe to run.
 
 ### Install Dependencies
 
-**Arch Linux:**
 ```bash
 sudo pacman -S gcc systemd-libs
 debian/ubuntu
