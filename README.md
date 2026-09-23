@@ -11,7 +11,7 @@
 
 ---
 
-## 📖 What is Azen?
+##  What is Azen?
 
 Azen is a project with two parts:
 
@@ -22,7 +22,7 @@ Azen is a project with two parts:
 
 ---
 
-## 🚀 Latest Release
+##  Latest Release
 
 **NVazen 2.0lts.1H2609**
 
@@ -34,7 +34,7 @@ Built on Arch Linux, featuring:
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 | Folder | Description |
 |--------|-------------|
@@ -46,7 +46,7 @@ Built on Arch Linux, featuring:
 
 ---
 
-## 🔧 ALRM Technology
+##  ALRM Technology
 
 ALRM (Azen Laptop Resources Management) is our exclusive technology:
 
@@ -56,17 +56,17 @@ ALRM (Azen Laptop Resources Management) is our exclusive technology:
 
 ---
 
-## 📜 License
+##  License
 
 GPLv3 — see [LICENSE](LICENSE)
 
 ---
 
-## 📬 Contact
+##  Contact
 
-- 🌐 Website: [azen.dev](https://azen.dev)
-- 📧 Email: zitingliang18@gmail.com
-- 🐙 GitHub: [AzenDev2026/Azen_dev](https://github.com/AzenDev2026/Azen_dev)
+-  Website: [azen.dev](https://azen.dev)
+-  Email: zitingliang18@gmail.com
+-  GitHub: [AzenDev2026/Azen_dev](https://github.com/AzenDev2026/Azen_dev)
 
 ---
 
