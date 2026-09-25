@@ -85,7 +85,7 @@ bool SleepManager::enable_s2idle() {
 bool SleepManager::apply_config() {
     if (config_.is_energy_saver()) {
         log(LogLevel::INFO, "⚡ 节能模式: 启用深度睡眠");
-        return enable_deep_sleep();
+        return enable_s2idle();
     } else if (config_.is_performance_mode()) {
         log(LogLevel::INFO, "⚡ 性能模式: 启用浅睡眠");
         return enable_s2idle();
