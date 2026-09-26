@@ -1,0 +1,9 @@
+{logo_path} :
+/home/admin/icon2.png
+
+{system_version} :
+name: NVazen 2.0
+version code: NVazen 2.0lts.1H2609
+
+{other_info} :
+path: /etc/os-release

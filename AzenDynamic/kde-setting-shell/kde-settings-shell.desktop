@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Application
+Name=系统设置
+Name[en_US]=System Settings
+Name[ja_JP]=システム設定
+Name[fr_FR]=Paramètres système
+Name[de_DE]=Systemeinstellungen
+Comment=KDE Settings Shell
+Comment[en_US]=KDE Settings Shell
+Comment[ja_JP]=KDE 設定シェル
+Comment[fr_FR]=KDE Settings Shell
+Comment[de_DE]=KDE Settings Shell
+Exec=/home/admin/Desktop/kde-setting-shell/launch.sh
+Icon=preferences-system
+Terminal=false
+Categories=Settings;System;Qt;
+StartupNotify=true
+StartupWMClass=KDE Settings Shell
