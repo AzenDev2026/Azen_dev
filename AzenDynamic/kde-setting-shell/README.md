@@ -19,7 +19,7 @@ A Windows 11–style settings shell for KDE Plasma, written in Python + PyQt6.
 
 ## Requirements
 
-- KDE Plasma 6（Wayland 或 X11）
+- KDE Plasma 6（Wayland or X11）
 - Python 3.10+
 - PyQt6
 - system command：`brightnessctl`、`wpctl`、`nmcli`、`bluetoothctl`、`kscreen-doctor`、`plasma-apply-lookandfeel`、`plasma-apply-wallpaperimage`、`qdbus6`、`upower` 或 `acpi`
