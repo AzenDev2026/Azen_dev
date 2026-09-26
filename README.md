@@ -90,8 +90,6 @@ Current progress:
 
 -  **Monitoring Layer (C)** — Listens to lid, power button, and D-Bus sleep events
 -  **Execution Layer (C + Rust)** — Freeze processes, switch sleep modes, control hardware
--  **Execution Layer (C + Rust)** — Freeze processes, switch sleep modes, control hardware
-
 
 ---
 
